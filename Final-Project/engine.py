@@ -25,10 +25,10 @@ class ClusteringEngine:
 
         self.model[id]=(self.model[id][0],model,self.model[id][2])
 
-    def getPrediction(self, id,x,y):
+    def getPrediction(self, id,x,y,z):
         if(self.model[id][1] == None):
             self.trainModel(id)
-        predict_this = self.sc.createDataFrame([(x,y)],['Latitude','Longitude'])
+        predict_this = self.sc.createDataFrame([(x,y,z)],['Latitude','Longitude','Sentiment'])
         predict_this = self.assembler.transform(predict_this)
         predict_result = self.model[id][1].transform(predict_this).select("features", "prediction").toJSON().collect()
 
@@ -43,6 +43,15 @@ class ClusteringEngine:
         predict_result = self.model[id][1].transform(predict_this).select("features", "prediction").toJSON().collect()
 
         return predict_result
+    
+    def getModelsInfo(self):
+        lens = len(self.model)
+        x = {}
+        x['total-model']=lens
+        for i in range(0,lens):
+            x['panjang-data-ke-'+str(i)]=self.model[i][0].count()
+        return x
+
 
     def addData(self,data):
         
