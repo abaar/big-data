@@ -1,4 +1,4 @@
-# Big-Data Final Project
+# Big-Data Final Project - Streaming Clustering using Apache Spark Streaming
 
 ## Jumpto
 1. [API](#api)
@@ -18,6 +18,8 @@ Tidak ada batas jumlah `model`, karena aplikasi ini berjalan secara `STREAMING` 
 Dalam kasus ini , 1 Model dibentuk dalam kurun waktu `60 Detik`. 
 
 Kira kira gambarannya seperti ini, T(i) adalah jumlah data yang didapatkan dalam batch pengambilan data ke-i, T(i+1) = T(i) + T(i+1)
+
+Namun, untuk keperluan akademik, aplikasi ini menggunakan `Producer.py` yang seolah-olah mengeluarkan data secara terus-menerus.
 
 ## Batasan
 Dataset yang dipakai adalah [Sentiment By Location](https://www.kaggle.com/jacksapper/company-sentiment-by-location) - 2577779 baris. Field yang digunakan untuk clustering adalah `Latitude`, `Longitude`, dan `Sentiment`.
