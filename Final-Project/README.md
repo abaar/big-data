@@ -13,6 +13,8 @@
 2. `http://127.0.0.1:51629/model-cluster/{id}?latitude={x}&longitude={y}&sentiment={z}` : Model ke-`id` , dengan data `x`,`y`,`z,` sebagai bahan untuk memprediksi cluster.
 3. `http://127.0.0.1:51629/show-cluster/{id}` : Menampilkan semua hasil prediksi untuk data ke-id dengan model ke-id
 
+* {} : Required
+
 ## Jumlah Model
 Tidak ada batas jumlah `model`, karena aplikasi ini berjalan secara `STREAMING` sehingga ketika ada data baru, akan ditambahkan kedalam total data sebelumnya.
 Dalam kasus ini , 1 Model dibentuk dalam kurun waktu `60 Detik`. 
