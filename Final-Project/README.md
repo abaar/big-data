@@ -44,7 +44,10 @@ Mesin pemodelan dan prediksi
 
 ## Screenshots
 ### Fitur 1
+[!fitur 1](https://github.com/abaar/big-data/blob/master/Final-Project/screenshots/fitur1.PNG)
 
 ### Fitur 2
+[!fitur 2](https://github.com/abaar/big-data/blob/master/Final-Project/screenshots/fitur2.PNG)
 
 ### Fitur 3
+[!fitur 3](https://github.com/abaar/big-data/blob/master/Final-Project/screenshots/fitur3.PNG)
